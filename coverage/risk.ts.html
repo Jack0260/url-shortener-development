@@ -1,0 +1,394 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for risk.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> risk.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>76/76</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>62/62</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>8/8</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>53/53</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">539x</span>
+<span class="cline-any cline-yes">539x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">539x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">541x</span>
+<span class="cline-any cline-yes">537x</span>
+<span class="cline-any cline-yes">534x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">1090x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">9082x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">9146x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-yes">538x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export type RiskLevel = 'safe' | 'suspicious' | 'dangerous'
+&nbsp;
+export interface RiskSignal {
+  id: string
+  label: string
+  points: number
+}
+&nbsp;
+export interface RiskReport {
+  score: number
+  level: RiskLevel
+  signals: RiskSignal[]
+}
+&nbsp;
+export const SUSPICIOUS_THRESHOLD = 30
+export const BLOCK_THRESHOLD = 70
+&nbsp;
+const SUSPICIOUS_TLDS = new Set([
+  'zip', 'mov', 'xyz', 'top', 'tk', 'ml', 'ga', 'cf', 'gq', 'click',
+  'country', 'kim', 'work', 'rest', 'support', 'loan', 'cam', 'icu',
+])
+&nbsp;
+const SHORTENERS = new Set([
+  'bit.ly', 'tinyurl.com', 't.co', 'goo.gl', 'ow.ly', 'is.gd',
+  'buff.ly', 'cutt.ly', 'rebrand.ly', 'shorturl.at',
+])
+&nbsp;
+const PHISHING_KEYWORDS = [
+  'login', 'signin', 'verify', 'account', 'secure', 'update', 'banking',
+  'wallet', 'password', 'confirm', 'suspend', 'unlock', 'billing',
+  'invoice', 'prize', 'bonus', 'giveaway',
+]
+&nbsp;
+const BRANDS = [
+  'paypal', 'apple', 'microsoft', 'google', 'amazon', 'netflix', 'facebook',
+  'instagram', 'whatsapp', 'coinbase', 'binance', 'chase', 'wellsfargo',
+  'dropbox', 'docusign', 'office365', 'outlook',
+]
+&nbsp;
+const SECOND_LEVEL_SUFFIXES = new Set(['co', 'com', 'org', 'net', 'gov', 'ac', 'edu'])
+const EXECUTABLE_PATH = /\.(exe|scr|msi|bat|cmd|ps1|vbs|apk|jar|dmg|iso|hta)$/i
+const EMBEDDED_REDIRECT = /[?&amp;][^=&amp;]*(redirect|url|next|goto|dest)[^=&amp;]*=https?(:|%3a)/i
+const IPV4 = /^\d{1,3}(\.\d{1,3}){3}$/
+&nbsp;
+export function registrableDomain(host: string): string {
+  const labels = host.split('.')
+  if (labels.length &lt;= 2) return host
+  const tld = labels[labels.length - 1]
+  const sld = labels[labels.length - 2]
+  const take = SECOND_LEVEL_SUFFIXES.has(sld) &amp;&amp; tld.length === 2 ? 3 : 2
+  return labels.slice(-take).join('.')
+}
+&nbsp;
+export function levelForScore(score: number): RiskLevel {
+  if (score &gt;= BLOCK_THRESHOLD) return 'dangerous'
+  if (score &gt;= SUSPICIOUS_THRESHOLD) return 'suspicious'
+  return 'safe'
+}
+&nbsp;
+export function scoreUrl(rawUrl: string): RiskReport {
+  const url = new URL(rawUrl)
+  const host = url.hostname.toLowerCase()
+  const signals: RiskSignal[] = []
+  const add = (id: string, label: string, points: number) =&gt; signals.push({ id, label, points })
+&nbsp;
+  const isIp = IPV4.test(host) || host.startsWith('[')
+  const labels = host.split('.')
+  const tld = labels[labels.length - 1]
+  const base = isIp ? host : registrableDomain(host)
+&nbsp;
+  if (url.protocol !== 'https:') add('no-https', 'Not using HTTPS', 10)
+  if (isIp) add('ip-host', 'Raw IP address instead of a domain', 25)
+  if (url.username || url.password) add('userinfo', 'Hidden credentials ("@" trick) in URL', 25)
+  if (labels.some((label) =&gt; label.startsWith('xn--'))) {
+    add('punycode', 'Punycode domain (possible look-alike characters)', 20)
+  }
+  if (!isIp &amp;&amp; SUSPICIOUS_TLDS.has(tld)) add('tld', `High-abuse TLD .${tld}`, 15)
+  if (!isIp &amp;&amp; labels.length &gt; 4) add('subdomains', 'Excessive subdomain depth', 10)
+  if ((host.match(/-/g)?.length ?? 0) &gt;= 3) add('hyphens', 'Many hyphens in domain', 10)
+  if (host.length &gt; 30) add('long-host', 'Unusually long domain', 5)
+  if (rawUrl.length &gt; 120) add('long-url', 'Very long URL', 5)
+  if (url.port) add('port', `Non-standard port :${url.port}`, 10)
+  if (SHORTENERS.has(base)) add('nested-shortener', 'Points to another URL shortener', 15)
+&nbsp;
+  const hostTokens = host.split(/[.-]/)
+  const baseLabel = base.split('.')[0]
+  const brand = BRANDS.find((b) =&gt; hostTokens.includes(b) &amp;&amp; baseLabel !== b)
+  if (brand) add('brand', `Mentions "${brand}" but is not ${brand}'s domain`, 30)
+&nbsp;
+  const haystack = `${host}${url.pathname}${url.search}`.toLowerCase()
+  const keywordHits = PHISHING_KEYWORDS.filter((k) =&gt; haystack.includes(k))
+  if (keywordHits.length &gt; 0) {
+    add('keywords', `Phishing keywords: ${keywordHits.slice(0, 4).join(', ')}`, Math.min(keywordHits.length * 5, 20))
+  }
+&nbsp;
+  if (EXECUTABLE_PATH.test(url.pathname)) add('executable', 'Links directly to an executable download', 20)
+  if ((rawUrl.match(/%[0-9a-f]{2}/gi)?.length ?? 0) &gt;= 5) add('encoding', 'Heavy percent-encoding', 10)
+  if (EMBEDDED_REDIRECT.test(url.search)) add('open-redirect', 'Embeds a redirect to another URL', 10)
+  if (!isIp &amp;&amp; host.replace(/\D/g, '').length &gt;= 5) add('digits', 'Many digits in domain', 5)
+&nbsp;
+  const score = Math.min(100, signals.reduce((sum, s) =&gt; sum + s.points, 0))
+  return { score, level: levelForScore(score), signals }
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-10-02T04:19:15.586Z
+            </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    
